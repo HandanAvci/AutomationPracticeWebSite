@@ -34,9 +34,7 @@ public class AutomationPractice {
 		pf.getPassword().sendKeys("12345");
         pf.getSubmit();
         pf.getSubmit().click();
-        pf.getDresses();
-        pf.getDresses().click();
-        pf.getFifthdress();
+pf.getFifthdress();
     	jse.executeScript("arguments[0].style.border='3px solid red'", pf.getFifthdress());
        
         pf.getFifthdress().click();

@@ -81,7 +81,7 @@ public class AutomationPractice {
         HighLighter.colour(driver,pf.getConfirmOrder());
         pf.getConfirmOrder().click();
         pf.getSignOut().click();
-        TakescreenShot.captureScreenShot(driver, "My Account- My Store");
+        TakescreenShot.captureScreenShot(driver, "Automation login page");
         driver.close();
         
       

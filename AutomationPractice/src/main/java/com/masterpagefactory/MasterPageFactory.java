@@ -8,7 +8,7 @@ public class MasterPageFactory {
 	WebDriver driver;
 	public void MasterPageFactory(WebDriver driver) {
 		this.driver=driver;
-	}
+ }
 		@FindBy
 		(xpath = ("(//*[contains(@class,'login')])"))
 		private WebElement signin;
@@ -25,7 +25,13 @@ public class MasterPageFactory {
 		(xpath=("//*[contains(@id,'SubmitLogin')]"))
 		private WebElement submit;
 		
+		@FindBy
+		(xpath=("(//*[contains(@class,'sf-with-ul')])[4]"))
+		private WebElement dresses;
 		
+		public WebElement getDresses() {
+			return dresses;
+		}
 		@FindBy
 		(xpath=("(//*[contains(@class,'product-name')])[7]"))
 		private WebElement fifthdress;

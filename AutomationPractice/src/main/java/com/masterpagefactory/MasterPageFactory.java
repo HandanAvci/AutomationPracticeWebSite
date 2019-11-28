@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class MasterPageFactory {
 	WebDriver driver;
-	public void MasterPageFactory(WebDriver driver) {
+	public MasterPageFactory(WebDriver driver) {
 		this.driver=driver;
  }
 		@FindBy

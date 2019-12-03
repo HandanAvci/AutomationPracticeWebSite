@@ -23,6 +23,7 @@ public class ObjectMap {
 		
 	
 		properties.getProperty(object); 
+		
 		return properties.getProperty(object);
 		
 		

@@ -1,13 +1,10 @@
+
+
 package com.automationpractice;
-
-
-
-
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -31,12 +28,13 @@ public class AutomationPractice {
 		String title = driver.getTitle();
 
 		System.out.println("My Store");
-
+		  
 		ObjectMap obj = new ObjectMap();
 		driver.get(obj.getconfig("URL"));
 
 		MasterPageFactory pf = PageFactory.initElements(driver, MasterPageFactory.class);
-
+      
+ 
 		HighLighter.colour(driver, pf.getSignin());
 
 		pf.getSignin().click();
@@ -55,43 +53,35 @@ public class AutomationPractice {
 
 		pf.getDresses().click();
 
-		HighLighter.colour(driver, pf.getFifthdress());
-		pf.getFifthdress();
-
-		Thread.sleep(2000);
-		HighLighter.colour(driver, pf.getFifthdress());
-		Thread.sleep(2000);
-
-		pf.getFifthdress().click();
-		Thread.sleep(2000);
-		HighLighter.colour(driver, pf.getAddToCart());
-		HighLighter.colour(driver, pf.getAddToCart());
-		Thread.sleep(2000);
-
-		pf.getAddToCart();
-		pf.getAddToCart().submit();
-		HighLighter.colour(driver, pf.getIconPlus());
-		Thread.sleep(2000);
-		HighLighter.colour(driver, pf.getIconPlus());
-		pf.getIconPlus();
-
-		pf.getIconPlus().click();
-		pf.getIconPlus().click();
-		Thread.sleep(2000);
-		pf.getIconPlus().click();
-
-		pf.getIconPlus().click();
-
-		pf.getIconPlus().click();
-		Thread.sleep(2000);
+		
+		pf.getSeconddresses().click();
+		pf.getPinkDress().click();
+		pf.getIconPlus1().click();
+		pf.getSelector().click();
+		
+		HighLighter.colour(driver, pf.getSecondDressSubmit());
+		pf.getSecondDressSubmit().click();
+	
+	Thread.sleep(1000);
 
 		
+		HighLighter.colour(driver, pf.getSecondDressCheckOut());
 		
-		HighLighter.colour(driver, pf.getCheckOut2());
-		pf.getCheckOut2().click();
-		TakescreenShot.captureScreenShot(driver, "Total Price");
+		TakescreenShot.captureScreenShot(driver, "Total Shipping");
+		Thread.sleep(2000);
+	
+	
+		pf.getSecondDressCheckOut().click();
+		Thread.sleep(2000);
+	
+		  HighLighter.colour(driver, pf.getCheckOut2());
+		  Thread.sleep(2000);
+		  
+	   pf.getCheckOut2().click();
+		
+		
 		pf.getCheckOut3().click();
-
+		
 		HighLighter.colour(driver, pf.getTermsOfService());
 		pf.getTermsOfService();
 		Thread.sleep(2000);
@@ -105,11 +95,12 @@ public class AutomationPractice {
 		pf.getCheque().click();
 
 		HighLighter.colour(driver, pf.getConfirmOrder());
+		TakescreenShot.captureScreenShot(driver, "Total Price");
 		pf.getConfirmOrder().click();
-		pf.getSignOut().click();
+		//pf.getSignOut().click();
 
 		TakescreenShot.captureScreenShot(driver, "Automation login page");
-		// driver.close();
+	//	 driver.close();
 
 	}
 

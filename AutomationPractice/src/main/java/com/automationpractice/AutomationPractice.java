@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
 
 import com.config.ObjectMap;
 import com.masterpagefactory.MasterPageFactory;
@@ -15,8 +16,11 @@ import com.util.HighLighter;
 import com.util.TakescreenShot;
 
 public class AutomationPractice {
+	
+	@Test
+	public void Setup() throws InterruptedException, IOException  {
 
-	public static void main(String[] args) throws InterruptedException, IOException {
+	//public static void main(String[] args) throws InterruptedException, IOException {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\nefer\\Downloads\\chromedriver_win32\\chromedriver.exe");
 

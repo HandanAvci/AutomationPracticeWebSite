@@ -1,13 +1,18 @@
 
 
+
 package com.automationpractice;
 
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.config.ObjectMap;
@@ -15,20 +20,24 @@ import com.masterpagefactory.MasterPageFactory;
 import com.util.HighLighter;
 import com.util.TakescreenShot;
 
+
+
 public class AutomationPractice {
+   WebDriver driver;
 	
-	@Test
-	public void Setup() throws InterruptedException, IOException  {
-
-	//public static void main(String[] args) throws InterruptedException, IOException {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\nefer\\Downloads\\chromedriver_win32\\chromedriver.exe");
-
-		WebDriver driver = new ChromeDriver();// upcasting polly
+    @BeforeTest
+	public void Setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\nefer\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+	 ChromeOptions chromeOptions =new ChromeOptions();
+		driver = new ChromeDriver(chromeOptions);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);// wait for HTML
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS); //wait for your page load GUI
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+	}
+	
+	@Test
+		public void login() throws Throwable {
 		String title = driver.getTitle();
 
 		System.out.println("My Store");
@@ -60,8 +69,11 @@ public class AutomationPractice {
 		
 		pf.getSeconddresses().click();
 		pf.getPinkDress().click();
+		Select drpdown = new Select(driver.findElement(By.name("group_1")));
+		drpdown.selectByValue("2");
 		pf.getIconPlus1().click();
 		pf.getSelector().click();
+		
 		
 		HighLighter.colour(driver, pf.getSecondDressSubmit());
 		pf.getSecondDressSubmit().click();
@@ -77,7 +89,7 @@ public class AutomationPractice {
 	
 		pf.getSecondDressCheckOut().click();
 		Thread.sleep(2000);
-	
+	  
 		  HighLighter.colour(driver, pf.getCheckOut2());
 		  Thread.sleep(2000);
 		  
@@ -101,10 +113,15 @@ public class AutomationPractice {
 		HighLighter.colour(driver, pf.getConfirmOrder());
 		TakescreenShot.captureScreenShot(driver, "Total Price");
 		pf.getConfirmOrder().click();
-		//pf.getSignOut().click();
+		pf.getSignOut().click();
+
 
 		TakescreenShot.captureScreenShot(driver, "Automation login page");
-	//	 driver.close();
+	}
+		@AfterTest
+		public void teardown() {
+		
+		driver.quit();
 
 	}
 

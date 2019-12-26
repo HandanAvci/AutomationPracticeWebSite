@@ -3,10 +3,12 @@
 
 package com.automationpractice;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
@@ -59,6 +61,9 @@ public class AutomationPractice {
 		pf.getPassword().sendKeys(obj.getconfig("Password"));
 
 		HighLighter.colour(driver, pf.getSubmit());
+		
+		
+		
 		Thread.sleep(2000);
 		pf.getSubmit().click();
 
@@ -66,11 +71,14 @@ public class AutomationPractice {
 
 		pf.getDresses().click();
 
+		pf.getListDresses();
+		
 		
 		pf.getSeconddresses().click();
 		pf.getPinkDress().click();
 		Select drpdown = new Select(driver.findElement(By.name("group_1")));
 		drpdown.selectByValue("2");
+		
 		pf.getIconPlus1().click();
 		pf.getSelector().click();
 		
@@ -103,8 +111,11 @@ public class AutomationPractice {
 		Thread.sleep(2000);
 		pf.getTermsOfService().click();
 
+		
+		
 		pf.getLastCheckOut().click();
 		Thread.sleep(2000);
+		
 
 		HighLighter.colour(driver, pf.getCheque());
 		Thread.sleep(2000);
@@ -117,7 +128,12 @@ public class AutomationPractice {
 
 
 		TakescreenShot.captureScreenShot(driver, "Automation login page");
-	}
+	
+
+		}
+	
+	
+	
 		@AfterTest
 		public void teardown() {
 		

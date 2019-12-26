@@ -1,5 +1,7 @@
 package com.masterpagefactory;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,9 +29,12 @@ public class MasterPageFactory {
 
 	@FindBy(xpath = ("(//*[contains(@class,'sf-with-ul')])[4]"))
 	private WebElement dresses;
-
-	@FindBy
-	(xpath=("(//*[contains(@class,'product-name')])[4]"))
+	
+	
+    @FindBy(xpath="//ul[@class='product_list row grid//li//a']")
+    private List<WebElement> productList;
+    
+	@FindBy(xpath=("(//*[contains(@class,'product-name')])[4]"))
 	private WebElement seconddresses;
 	
 	@FindBy
@@ -216,6 +221,9 @@ public class MasterPageFactory {
 
 
 
+	  public List<WebElement> getListDresses() {
+			return productList;
+		}
 
 
 

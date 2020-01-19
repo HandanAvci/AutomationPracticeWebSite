@@ -6,8 +6,16 @@
       <class name="com.automationpractice.AutomationPractice">
         <methods>
           <include name="teardown"/>
+          <include name="before"/>
           <include name="login"/>
-          <include name="Setup"/>
+          <include name="termsOfService"/>
+          <include name="addTocart"/>
+          <include name="setUp"/>
+          <include name="aftermethod"/>
+          <include name="sfterSuite"/>
+          <include name="product"/>
+          <include name="checkOut"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- com.automationpractice.AutomationPractice -->
     </classes>

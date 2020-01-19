@@ -27,15 +27,99 @@ public class MasterPageFactory {
 	@FindBy(xpath = ("//*[contains(@id,'SubmitLogin')]"))
 	private WebElement submit;
 
+	@FindBy(xpath = ("//*[@id='selectProductSort']"))
+	private List<WebElement> dropdown;
+	public List<WebElement> getDropdown() {
+		return dropdown;
+	}
+
+	public void setDropdown(List<WebElement> dropdown) {
+		this.dropdown = dropdown;
+	}
+
 	@FindBy(xpath = ("(//*[contains(@class,'sf-with-ul')])[4]"))
 	private WebElement dresses;
+	public WebElement getDresses() {
+		return dresses;
+	}
+
+	public void setDresses(WebElement dresses) {
+		this.dresses = dresses;
+	}
+
+	@FindBy(xpath=("//*[@id=\"selectProductSort\"]"))
+	private List<WebElement>shortby;
+	
+	@FindBy(xpath=("//*[@id=\"center_column\"]/ul/li[4]/div[2]/h5/a"))
+	private List<WebElement>select;
+	@FindBy(xpath=("//*[@id='total_price_container']"))
+	private List<WebElement>totalPrice;
 	
 	
-    @FindBy(xpath="//ul[@class='product_list row grid//li//a']")
+	
+public List<WebElement> getShortby() {
+		return shortby;
+	}
+
+	public List<WebElement> getSelect() {
+		return select;
+	}
+
+	public List<WebElement> getTotalPrice() {
+		return totalPrice;
+	}
+
+
+
+@FindBy
+(xpath=("//*[contains(@id,'category')])[3]"))
+private WebElement category;
+	
+	public WebElement getCategory() {
+	return category;
+}
+@FindBy (xpath=("//*[contains(@class,'product_list grid row')]"))
+private List<WebElement> productRow;
+	public List<WebElement> getProductRow() {
+	return productRow;
+}
+
+	@FindBy(xpath=("(//*[contains(@id,'selectProductSort')])[2]"))
+	private WebElement selectProductSort;
+	@FindBy(xpath=("//*[contains(text(),'Price: Lowest first')]"))
+	private WebElement priceLowestFirst;
+	
+    public WebElement getSelectProductSort() {
+		return selectProductSort;
+	}
+
+	public WebElement getPriceLowestFirst() {
+		return priceLowestFirst;
+	}
+
+	public List<WebElement> getProductList() {
+		return productList;
+	}
+
+	@FindBy(xpath="//ul[@class='product_list row grid//li//a']")
     private List<WebElement> productList;
     
-	@FindBy(xpath=("(//*[contains(@class,'product-name')])[4]"))
+	
+    
+    
+    
+    @FindBy(xpath=("(//*[contains(@class,'product-name')])[4]"))
 	private WebElement seconddresses;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@FindBy
 	(xpath=("//*[contains(@name,'Pink')]"))
@@ -186,9 +270,7 @@ public class MasterPageFactory {
 		return driver;
 
 	}
-	public WebElement getDresses() {
-		return dresses;
-	}
+
 
 	public WebElement getSeconddresses() {
 		return seconddresses;

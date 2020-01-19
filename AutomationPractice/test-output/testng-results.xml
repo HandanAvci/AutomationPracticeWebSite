@@ -1,24 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52230" started-at="2019-12-26T21:47:34Z" finished-at="2019-12-26T21:48:26Z">
+  <suite name="Default suite" duration-ms="60985" started-at="2020-01-19T01:42:31Z" finished-at="2020-01-19T01:43:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52230" started-at="2019-12-26T21:47:34Z" finished-at="2019-12-26T21:48:26Z">
+    <test name="Default test" duration-ms="60985" started-at="2020-01-19T01:42:31Z" finished-at="2020-01-19T01:43:32Z">
       <class name="com.automationpractice.AutomationPractice">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.automationpractice.AutomationPractice@5e5792a0]" name="Setup" is-config="true" duration-ms="4102" started-at="2019-12-26T21:47:34Z" finished-at="2019-12-26T21:47:38Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="before" is-config="true" duration-ms="218" started-at="2020-01-19T01:42:31Z" finished-at="2020-01-19T01:42:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.automationpractice.AutomationPractice@5e5792a0]" name="login" duration-ms="47437" started-at="2019-12-26T21:47:38Z" finished-at="2019-12-26T21:48:25Z">
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4420" started-at="2020-01-19T01:42:31Z" depends-on-methods="com.report.ExtentReport.before" finished-at="2020-01-19T01:42:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="setUp" is-config="true" duration-ms="22" started-at="2020-01-19T01:42:35Z" finished-at="2020-01-19T01:42:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automationpractice.AutomationPractice.login() throws java.lang.Throwable]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="login" duration-ms="17907" started-at="2020-01-19T01:42:35Z" finished-at="2020-01-19T01:42:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.automationpractice.AutomationPractice@5e5792a0]" name="teardown" is-config="true" duration-ms="666" started-at="2019-12-26T21:48:25Z" finished-at="2019-12-26T21:48:26Z">
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="aftermethod" is-config="true" duration-ms="4" started-at="2020-01-19T01:42:53Z" finished-at="2020-01-19T01:42:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=AutomationPractice.login()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="setUp" is-config="true" duration-ms="1" started-at="2020-01-19T01:42:53Z" finished-at="2020-01-19T01:42:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automationpractice.AutomationPractice.product()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="product()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="product" duration-ms="3863" started-at="2020-01-19T01:42:53Z" depends-on-methods="com.automationpractice.AutomationPractice.login" finished-at="2020-01-19T01:42:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- product -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="aftermethod" is-config="true" duration-ms="1" started-at="2020-01-19T01:42:57Z" finished-at="2020-01-19T01:42:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=product status=SUCCESS method=AutomationPractice.product()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="setUp" is-config="true" duration-ms="1" started-at="2020-01-19T01:42:57Z" finished-at="2020-01-19T01:42:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automationpractice.AutomationPractice.addTocart() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addTocart()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="addTocart" duration-ms="15683" started-at="2020-01-19T01:42:57Z" depends-on-methods="com.automationpractice.AutomationPractice.product" finished-at="2020-01-19T01:43:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTocart -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="aftermethod" is-config="true" duration-ms="4" started-at="2020-01-19T01:43:13Z" finished-at="2020-01-19T01:43:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addTocart status=SUCCESS method=AutomationPractice.addTocart()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4" started-at="2020-01-19T01:43:13Z" finished-at="2020-01-19T01:43:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automationpractice.AutomationPractice.termsOfService() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="termsOfService()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="termsOfService" duration-ms="2264" started-at="2020-01-19T01:43:13Z" depends-on-methods="com.automationpractice.AutomationPractice.addTocart" finished-at="2020-01-19T01:43:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- termsOfService -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="aftermethod" is-config="true" duration-ms="2" started-at="2020-01-19T01:43:15Z" finished-at="2020-01-19T01:43:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=termsOfService status=SUCCESS method=AutomationPractice.termsOfService()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="setUp" is-config="true" duration-ms="2" started-at="2020-01-19T01:43:15Z" finished-at="2020-01-19T01:43:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.automationpractice.AutomationPractice.checkOut() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkOut()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="checkOut" duration-ms="15080" started-at="2020-01-19T01:43:15Z" depends-on-methods="com.automationpractice.AutomationPractice.termsOfService" finished-at="2020-01-19T01:43:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOut -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="teardown" is-config="true" duration-ms="780" started-at="2020-01-19T01:43:30Z" finished-at="2020-01-19T01:43:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="aftermethod" is-config="true" duration-ms="0" started-at="2020-01-19T01:43:30Z" finished-at="2020-01-19T01:43:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkOut status=SUCCESS method=AutomationPractice.checkOut()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="sfterSuite()[pri:0, instance:com.automationpractice.AutomationPractice@6f7fd0e6]" name="sfterSuite" is-config="true" duration-ms="682" started-at="2020-01-19T01:43:31Z" depends-on-methods="com.automationpractice.AutomationPractice.teardown" finished-at="2020-01-19T01:43:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sfterSuite -->
       </class> <!-- com.automationpractice.AutomationPractice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

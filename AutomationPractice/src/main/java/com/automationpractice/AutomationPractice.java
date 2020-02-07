@@ -75,13 +75,21 @@ public class AutomationPractice extends ExtentReport {
 
 		pf.getDresses().click();
 		
+		
+		
+		
 
 		List<String> allproduct = new ArrayList<>();
 		for (int i = 0; i < pf.getProductRow().size(); i++) {
 			allproduct.add(pf.getProductRow().get(i).getText());
 
 		}
+		
+		
+		
 		System.out.println("All product from Automation Practice:" + allproduct);
+		
+		
 		Set<String> noDuplicateProduct = new HashSet<>(allproduct);
 		System.out.println("Without duplicate product from" + " Automation Practice:" + noDuplicateProduct);
 		
@@ -91,12 +99,15 @@ public class AutomationPractice extends ExtentReport {
 		dresses.put("Blouse", 27.00);
 		 dresses.put("Printed Dress", 26.00);
 		
+		
+		 
 		List<String> countItems = new ArrayList<>();
 
 		for (String item : allproduct) {
 
 			countItems.add(item + " count:" + Collections.frequency(allproduct, item));
 		}
+		
 
 		Set<String> noDuplicateCount = new HashSet<>(countItems);
 		System.out.println("Count of items from Automation Practice:" + noDuplicateCount);
@@ -117,11 +128,15 @@ public class AutomationPractice extends ExtentReport {
 
 		System.out.println("Max price: " + Collections.max(allPriceList));
 		System.out.println("Min price: " + Collections.min(allPriceList));
+		
+		
 		Set<Double> noDuplicatePrice = new HashSet<>(allPriceList);
 		System.out.println("Without duplicate price:" + noDuplicatePrice);
 
 		pf.getSeconddresses().click();
 		pf.getPinkDress().click();
+		
+		
 		Select drpdown = new Select(driver.findElement(By.name("group_1")));
 		drpdown.selectByValue("2");
 

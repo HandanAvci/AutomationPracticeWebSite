@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="2" name="Test(failed)" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.automationpractice.AutomationPractice">
+      <class name="com.runner.TestNGRunner$TestNgRunner">
         <methods>
+          <include name="product"/>
           <include name="teardown"/>
+          <include name="setUpClass"/>
+          <include name="addTocart"/>
+          <include name="termsOfService"/>
+          <include name="setUp"/>
+          <include name="checkOut"/>
+          <include name="tearDownClass"/>
           <include name="login"/>
-          <include name="Setup"/>
         </methods>
-      </class> <!-- com.automationpractice.AutomationPractice -->
+      </class> <!-- com.runner.TestNGRunner$TestNgRunner -->
     </classes>
   </test> <!-- Test(failed) -->
-  <test thread-count="2" name="Test2(failed)" parallel="tests">
-    <classes>
-      <class name="com.automationpractice.AutomationPractice">
-        <methods>
-          <include name="teardown"/>
-          <include name="login"/>
-          <include name="Setup"/>
-        </methods>
-      </class> <!-- com.automationpractice.AutomationPractice -->
-    </classes>
-  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

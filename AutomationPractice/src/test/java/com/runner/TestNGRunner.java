@@ -37,11 +37,14 @@ public class TestNGRunner {
 
 @CucumberOptions(plugin = { "pretty", "html:target/site/cucumber-pretty", "rerun:target/rerun.txt",
 		"json:target/cucumber1.json",
-		"com.cucumber.listener.ExtentCucumberFormatter:target/Cucumber_Extents_report.html" },
+		//"com.cucumber.listener.ExtentCucumberFormatter:target/Cucumber_Extents_report.html",
+		//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+		
+},
 
 		snippets = SnippetType.UNDERSCORE,
 
-		features = { "src/test/resources/AtomationPractice2.feature" }, glue = { "com.stepdefinition" }, 
+		features = { "src/test/resources/AutomationPractice2.feature" }, glue = { "com.stepdefinition" }, 
 	
 		
 		monochrome = true, strict = true, dryRun = false)

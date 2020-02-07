@@ -5,15 +5,11 @@
     <classes>
       <class name="com.runner.TestNGRunner$TestNgRunner">
         <methods>
-          <include name="product"/>
           <include name="teardown"/>
           <include name="setUpClass"/>
-          <include name="addTocart"/>
-          <include name="termsOfService"/>
+          <include name="runScenario" invocation-numbers="0"/>
           <include name="setUp"/>
-          <include name="checkOut"/>
           <include name="tearDownClass"/>
-          <include name="login"/>
         </methods>
       </class> <!-- com.runner.TestNGRunner$TestNgRunner -->
     </classes>

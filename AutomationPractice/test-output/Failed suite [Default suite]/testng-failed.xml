@@ -3,11 +3,40 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Default suite]]">
   <test thread-count="5" name="Default test(failed)(failed)">
     <classes>
+      <class name="com.automationpractice.testng.DependsOnMethod">
+        <methods>
+          <include name="method2"/>
+          <include name="setupMethod"/>
+        </methods>
+      </class> <!-- com.automationpractice.testng.DependsOnMethod -->
+      <class name="com.automationpractice.testng.ParameterByDataProvider">
+        <methods>
+          <include name="testMethodB"/>
+          <include name="testMethodA"/>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.automationpractice.testng.ParameterByDataProvider -->
       <class name="com.automationpractice.testng.ParameterTesting">
         <methods>
           <include name="getbrowser"/>
         </methods>
       </class> <!-- com.automationpractice.testng.ParameterTesting -->
+      <class name="com.automationpractice.AutomationPractice">
+        <methods>
+          <include name="teardown"/>
+          <include name="before"/>
+          <include name="login"/>
+          <include name="termsOfService"/>
+          <include name="addTocart"/>
+          <include name="setUp"/>
+          <include name="aftermethod"/>
+          <include name="sfterSuite"/>
+          <include name="product"/>
+          <include name="checkOut"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.automationpractice.AutomationPractice -->
     </classes>
   </test> <!-- Default test(failed)(failed) -->
 </suite> <!-- Failed suite [Failed suite [Default suite]] -->

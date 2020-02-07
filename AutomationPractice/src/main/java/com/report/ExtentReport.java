@@ -26,8 +26,7 @@ public class ExtentReport {
 
 	@BeforeTest
 	public void before() {
-		htmlreporter = new ExtentHtmlReporter(
-				new File(System.getProperty("user.dir") + "./target/ExtentsTestNGReport.html"));
+			htmlreporter = new ExtentHtmlReporter(new File(System.getProperty("user.dir") + "./target/ExtentsTestNGReport.html"));
 		htmlreporter.loadXMLConfig(new File(System.getProperty("user.dir") + "./Extent_confing.xml"), true);
 		htmlreporter.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();

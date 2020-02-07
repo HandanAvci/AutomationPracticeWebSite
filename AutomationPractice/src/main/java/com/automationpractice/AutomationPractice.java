@@ -2,8 +2,10 @@ package com.automationpractice;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -32,7 +34,7 @@ public class AutomationPractice extends ExtentReport {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\nefer\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
-		driver = new ChromeDriver(chromeOptions);
+	 driver = new ChromeDriver(chromeOptions);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -41,7 +43,8 @@ public class AutomationPractice extends ExtentReport {
 
 	@Test
 	public void login() throws Throwable {
-		String title = driver.getTitle();
+	
+        driver.getTitle();
 
 		System.out.println("My Store");
 
@@ -81,6 +84,13 @@ public class AutomationPractice extends ExtentReport {
 		System.out.println("All product from Automation Practice:" + allproduct);
 		Set<String> noDuplicateProduct = new HashSet<>(allproduct);
 		System.out.println("Without duplicate product from" + " Automation Practice:" + noDuplicateProduct);
+		
+		Map<String, Double> dresses=new HashMap<>();
+		System.out.println("Initial list of elements: "+dresses);  
+		dresses.put("Faded Short Sleeve T-shirts", 16.51);
+		dresses.put("Blouse", 27.00);
+		 dresses.put("Printed Dress", 26.00);
+		
 		List<String> countItems = new ArrayList<>();
 
 		for (String item : allproduct) {
@@ -103,6 +113,7 @@ public class AutomationPractice extends ExtentReport {
 		}
 
 		System.out.println("All price List - Lowest first: " + allPriceList);
+		System.out.println("All price List - Highest first: " + allPriceList);
 
 		System.out.println("Max price: " + Collections.max(allPriceList));
 		System.out.println("Min price: " + Collections.min(allPriceList));

@@ -15,7 +15,8 @@ public class MasterPageFactory {
 		this.driver = driver;
 	}
 
-	@FindBy(xpath = ("(//*[contains(@class,'login')])"))
+	@FindBy
+	(xpath = ("(//*[contains(@class,'login')])"))
 	private WebElement signin;
 
 	@FindBy(xpath = ("(//*[contains(@id,'email')])[2]"))

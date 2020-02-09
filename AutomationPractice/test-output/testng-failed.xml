@@ -5,10 +5,8 @@
     <classes>
       <class name="com.runner.TestNGRunner$TestNgRunner">
         <methods>
-          <include name="teardown"/>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="setUp"/>
+          <include name="runScenario" invocation-numbers="1 2"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.runner.TestNGRunner$TestNgRunner -->

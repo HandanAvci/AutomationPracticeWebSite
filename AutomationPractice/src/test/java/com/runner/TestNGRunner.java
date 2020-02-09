@@ -44,14 +44,22 @@ public class TestNGRunner {
 
 		snippets = SnippetType.UNDERSCORE,
 
-		features = { "src/test/resources/AutomationPractice2.feature" }, glue = { "com.stepdefinition" }, 
+		features = { "src/test/resources/HomePage.feature"},
+		        //"src/test/resources/LoginPage.feature"},
+				//"src/test/resources/AutomationPractice2.feature",
+				//"src/test/resources/Dresses.feature",
+				//"src/test/resources/ShoppingCart.feature",
+				//"src/test/resources/Search.feature",
+				//"src/test/resources/Order.feature"}, 
+
+		glue = { "com.stepdefinition" }, 
 	
 		
 		monochrome = true, strict = true, dryRun = false)
 
 public class TestNgRunner extends AbstractTestNGCucumberTests {
 	
-	
+	/*
 	private WebDriver driver;
 	private MasterPageFactory pf;
 
@@ -212,8 +220,9 @@ public class TestNgRunner extends AbstractTestNGCucumberTests {
 
     }
 }
+*/
 }
-
+}
   
 
 

@@ -1,8 +1,8 @@
 Feature: Login function validation 
-
+@smoke
 Scenario: Successful Login with Valid Credentials 
 
-	Given User able to open any browser 
+	Given User is on Home Page
 	And  Put URL and go to login page 
 		|http://automationpractice.com/index.php?|
 	When User able to click my account 

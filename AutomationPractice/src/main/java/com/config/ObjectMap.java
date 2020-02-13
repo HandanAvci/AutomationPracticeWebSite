@@ -22,7 +22,7 @@ public class ObjectMap {
 		properties.load(fis); // properties & serilization connect together
 		
 	
-		properties.getProperty(object); 
+		properties.getProperty(object) ;
 		
 		return properties.getProperty(object);
 		

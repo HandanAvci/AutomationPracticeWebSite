@@ -1,36 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
+<testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16681" started-at="2020-02-09T15:14:33Z" finished-at="2020-02-09T15:14:50Z">
+  <suite name="Default suite" duration-ms="17779" started-at="2020-02-13T20:19:17Z" finished-at="2020-02-13T20:19:35Z">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNGRunner$TestNgRunner@31610302]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="16681" started-at="2020-02-09T15:14:33Z" finished-at="2020-02-09T15:14:50Z">
-      <class name="com.runner.TestNGRunner$TestNgRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.runner.TestNGRunner$TestNgRunner@31610302]" name="setUpClass" is-config="true" duration-ms="82" started-at="2020-02-09T15:14:33Z" finished-at="2020-02-09T15:14:33Z">
+    <test name="Default test" duration-ms="17779" started-at="2020-02-13T20:19:17Z" finished-at="2020-02-13T20:19:35Z">
+      <class name="com.runner.TestNgRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="setUpClass" is-config="true" duration-ms="80" started-at="2020-02-13T20:19:17Z" finished-at="2020-02-13T20:19:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNGRunner$TestNgRunner@31610302]" name="runScenario" duration-ms="10029" started-at="2020-02-09T15:14:33Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-09T15:14:43Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Home page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Home page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNGRunner$TestNgRunner@31610302]" name="runScenario" duration-ms="3193" started-at="2020-02-09T15:14:43Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-09T15:14:46Z">
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="13280" started-at="2020-02-13T20:19:17Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:30Z">
           <params>
             <param index="0">
               <value>
@@ -83,11 +67,59 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNGRunner$TestNgRunner@31610302]" name="runScenario" duration-ms="3231" started-at="2020-02-09T15:14:46Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-09T15:14:50Z">
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="3277" started-at="2020-02-13T20:19:30Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:33Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify that login funtionality"]]>
+                <![CDATA["Verify the dresses"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login page features"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.stepdefinition.LoginStepDef.user_click_on_the_dresses(LoginStepDef.java:107)
+at ✽.User click on the dresses(file:src/test/resources/LoginPage.feature:16)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="1012" started-at="2020-02-13T20:19:33Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the ability to add items from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login page features"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.stepdefinition.LoginStepDef.user_able_to_see_shopping_cart(LoginStepDef.java:202)
+at ✽.User able to see shopping cart(file:src/test/resources/LoginPage.feature:27)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="2" started-at="2020-02-13T20:19:34Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the ability to make an order and checks it ih the order history"]]>
               </value>
             </param>
             <param index="1">
@@ -136,11 +168,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.runner.TestNGRunner$TestNgRunner@31610302]" name="tearDownClass" is-config="true" duration-ms="105" started-at="2020-02-09T15:14:50Z" finished-at="2020-02-09T15:14:50Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="tearDownClass" is-config="true" duration-ms="87" started-at="2020-02-13T20:19:34Z" finished-at="2020-02-13T20:19:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- com.runner.TestNGRunner$TestNgRunner -->
+      </class> <!-- com.runner.TestNgRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -31,6 +31,7 @@ public class AutomationPractice extends ExtentReport {
 
 	@BeforeTest
 	public void setUp() {
+	
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\nefer\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();

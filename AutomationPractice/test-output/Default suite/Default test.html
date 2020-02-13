@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 09 10:14:33 EST 2020</td>
+<td>Started on:</td><td>Thu Feb 13 15:19:17 EST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>16 seconds (16681 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17779 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,7 +75,7 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.runner.TestNGRunner$TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNGRunner$TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user can navigate to Login Page", "Login page features"</td>
+<td title='com.runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that user can navigate to Login Page", "Login page features"</td>
 <td><div><pre>cucumber.runtime.CucumberException: There are undefined steps
 	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:58)
 	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
@@ -105,8 +105,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace48305285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace48305285'><pre>cucumber.runtime.CucumberException: There are undefined steps
+</pre></div><a href='#' onClick='toggleBox("stack-trace1860886124", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1860886124'><pre>cucumber.runtime.CucumberException: There are undefined steps
 	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:58)
 	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
@@ -136,10 +136,34 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.runner.TestNGRunner$TestNgRunner@31610302</td></tr>
+<td>13</td>
+<td>com.runner.TestNgRunner@544fe44c</td></tr>
 <tr>
-<td title='com.runner.TestNGRunner$TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNGRunner$TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify that login funtionality", "Login page features"</td>
+<td title='com.runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the dresses", "Login page features"</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.stepdefinition.LoginStepDef.user_click_on_the_dresses(LoginStepDef.java:107)
+	at ?.User click on the dresses(file:src/test/resources/LoginPage.feature:16)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2052223881", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2052223881'><pre>java.lang.NullPointerException
+	at com.stepdefinition.LoginStepDef.user_click_on_the_dresses(LoginStepDef.java:107)
+	at ?.User click on the dresses(file:src/test/resources/LoginPage.feature:16)
+</pre></div></td>
+<td>3</td>
+<td>com.runner.TestNgRunner@544fe44c</td></tr>
+<tr>
+<td title='com.runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the ability to add items from cart", "Login page features"</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.stepdefinition.LoginStepDef.user_able_to_see_shopping_cart(LoginStepDef.java:202)
+	at ?.User able to see shopping cart(file:src/test/resources/LoginPage.feature:27)
+</pre></div><a href='#' onClick='toggleBox("stack-trace662925691", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace662925691'><pre>java.lang.NullPointerException
+	at com.stepdefinition.LoginStepDef.user_able_to_see_shopping_cart(LoginStepDef.java:202)
+	at ?.User able to see shopping cart(file:src/test/resources/LoginPage.feature:27)
+</pre></div></td>
+<td>1</td>
+<td>com.runner.TestNgRunner@544fe44c</td></tr>
+<tr>
+<td title='com.runner.TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the ability to make an order and checks it ih the order history", "Login page features"</td>
 <td><div><pre>cucumber.runtime.CucumberException: There are undefined steps
 	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:58)
 	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
@@ -169,8 +193,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1717473929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1717473929'><pre>cucumber.runtime.CucumberException: There are undefined steps
+</pre></div><a href='#' onClick='toggleBox("stack-trace609483101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace609483101'><pre>cucumber.runtime.CucumberException: There are undefined steps
 	at cucumber.api.testng.TestCaseResultListener.getError(TestCaseResultListener.java:58)
 	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
@@ -200,21 +224,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
-<td>com.runner.TestNGRunner$TestNgRunner@31610302</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.runner.TestNGRunner$TestNgRunner.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestNGRunner$TestNgRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Home page", "Home page"</td>
-<td></td>
-<td>10</td>
-<td>com.runner.TestNGRunner$TestNgRunner@31610302</td></tr>
+<td>0</td>
+<td>com.runner.TestNgRunner@544fe44c</td></tr>
 </table><p>
 </body>
 </html>

@@ -6,11 +6,6 @@
       <class name="com.automationpractice.AutomationPractice"/>
     </classes>
   </test> <!-- Test -->
-  <test  name="Test2">
-    <classes>
-      <class name="com.automationpractice.AutomationPractice"/>
-    </classes>
-  </test> <!-- Test -->
 </suite> <!-- Suite -->
 
 

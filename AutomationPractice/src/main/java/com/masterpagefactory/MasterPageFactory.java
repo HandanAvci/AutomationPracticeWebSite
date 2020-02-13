@@ -10,11 +10,10 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MasterPageFactory {
 	WebDriver driver;
-
-	public MasterPageFactory(WebDriver driver) {
-		this.driver = driver;
-	}
-
+public void  MasterPageFactory( WebDriver driver) {
+	
+	this.driver=driver;
+}
 	@FindBy
 	(xpath = ("(//*[contains(@class,'login')])"))
 	private WebElement signin;

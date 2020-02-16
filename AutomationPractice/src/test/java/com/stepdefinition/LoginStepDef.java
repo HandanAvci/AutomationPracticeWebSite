@@ -33,7 +33,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginStepDef {
-	WebDriver driver;
+	static WebDriver driver;
 	MasterPageFactory pf;
 	ObjectMap obj;
 	@Given("user opens browser")
@@ -68,7 +68,7 @@ public class LoginStepDef {
 			Thread.sleep(2000);
 	}
 	
-	@And("^user enters login id$")
+	@When("^user enters login id$")
 	public void user_enters_login_id() throws IOException {
 		HighLighter.colour(driver, pf.getEmail());
 		pf.getEmail().sendKeys(obj.getconfig("Name"));
@@ -97,12 +97,6 @@ public class LoginStepDef {
 
 	@Given("^User click on the dresses$")
 	public void user_click_on_the_dresses() {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\nefer\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-		ChromeOptions chromeOptions = new ChromeOptions();
-		driver = new ChromeDriver(chromeOptions);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		pf.getDresses().click();
 	}

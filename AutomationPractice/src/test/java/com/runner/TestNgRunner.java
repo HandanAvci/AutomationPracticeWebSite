@@ -39,7 +39,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
      snippets=SnippetType.UNDERSCORE,
 
 		features = {"src/test/resources/LoginPage.feature" },
-			
+		tags = {"@Smoketest"},	
 
 		glue = { "com.stepdefinition" },
 

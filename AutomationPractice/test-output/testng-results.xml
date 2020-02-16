@@ -2,19 +2,19 @@
 <testng-results skipped="0" failed="4" ignored="0" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17779" started-at="2020-02-13T20:19:17Z" finished-at="2020-02-13T20:19:35Z">
+  <suite name="Default suite" duration-ms="16072" started-at="2020-02-15T20:36:03Z" finished-at="2020-02-15T20:36:19Z">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="17779" started-at="2020-02-13T20:19:17Z" finished-at="2020-02-13T20:19:35Z">
+    <test name="Default test" duration-ms="16072" started-at="2020-02-15T20:36:03Z" finished-at="2020-02-15T20:36:19Z">
       <class name="com.runner.TestNgRunner">
-        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="setUpClass" is-config="true" duration-ms="80" started-at="2020-02-13T20:19:17Z" finished-at="2020-02-13T20:19:17Z">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="setUpClass" is-config="true" duration-ms="170" started-at="2020-02-15T20:36:03Z" finished-at="2020-02-15T20:36:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="13280" started-at="2020-02-13T20:19:17Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:30Z">
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="14451" started-at="2020-02-15T20:36:03Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-15T20:36:18Z">
           <params>
             <param index="0">
               <value>
@@ -67,7 +67,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="3277" started-at="2020-02-13T20:19:30Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:33Z">
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="0" started-at="2020-02-15T20:36:18Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-15T20:36:18Z">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.stepdefinition.LoginStepDef.user_click_on_the_dresses(LoginStepDef.java:107)
+at com.stepdefinition.LoginStepDef.user_click_on_the_dresses(LoginStepDef.java:101)
 at ✽.User click on the dresses(file:src/test/resources/LoginPage.feature:16)
 ]]>
             </full-stacktrace>
@@ -91,7 +91,7 @@ at ✽.User click on the dresses(file:src/test/resources/LoginPage.feature:16)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="1012" started-at="2020-02-13T20:19:33Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:34Z">
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="1006" started-at="2020-02-15T20:36:18Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-15T20:36:19Z">
           <params>
             <param index="0">
               <value>
@@ -107,15 +107,15 @@ at ✽.User click on the dresses(file:src/test/resources/LoginPage.feature:16)
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.stepdefinition.LoginStepDef.user_able_to_see_shopping_cart(LoginStepDef.java:202)
-at ✽.User able to see shopping cart(file:src/test/resources/LoginPage.feature:27)
+at com.stepdefinition.LoginStepDef.user_able_to_see_shopping_cart(LoginStepDef.java:196)
+at ✽.User able to see shopping cart(file:src/test/resources/LoginPage.feature:26)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="2" started-at="2020-02-13T20:19:34Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-13T20:19:34Z">
+        <test-method status="FAIL" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="6" started-at="2020-02-15T20:36:19Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-15T20:36:19Z">
           <params>
             <param index="0">
               <value>
@@ -168,7 +168,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="tearDownClass" is-config="true" duration-ms="87" started-at="2020-02-13T20:19:34Z" finished-at="2020-02-13T20:19:35Z">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="tearDownClass" is-config="true" duration-ms="306" started-at="2020-02-15T20:36:19Z" finished-at="2020-02-15T20:36:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

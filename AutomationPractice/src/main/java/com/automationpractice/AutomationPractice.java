@@ -111,7 +111,6 @@ public class AutomationPractice extends ExtentReport {
 		dresses.put("Faded Short Sleeve T-shirts", 16.51);
 		dresses.put("Blouse", 27.00);
 		 dresses.put("Printed Dress", 26.00);
-		 dresses.put("Printed Summer Dress", 30.50);
 		 dresses.put("Printed Summer Dress",28.98);
 			System.out.println(dresses); 
 		 
@@ -149,9 +148,33 @@ public class AutomationPractice extends ExtentReport {
 		}
 		
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Set<String> noDuplicateCount = new HashSet<>(countItems);
 		System.out.println("Count of items from Automation Practice:" + noDuplicateCount);
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		String[] allPrice = { "$28.98 ", "$26.00", "$50.99", "$30.50", "$16.40" };
 		
 		List<Double> allPriceList = new ArrayList<>();

@@ -85,22 +85,61 @@ public class AutomationPractice extends ExtentReport {
 			allproduct.add(pf.getProductRow().get(i).getText());
 
 		}
-		
-		
-		
 		System.out.println("All product from Automation Practice:" + allproduct);
 		
 		
+		
+		
+		
 		Set<String> noDuplicateProduct = new HashSet<>(allproduct);
+		
 		System.out.println("Without duplicate product from" + " Automation Practice:" + noDuplicateProduct);
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Map<String, Double> dresses=new HashMap<>();
-		System.out.println("Initial list of elements: "+dresses);  
+	 
 		dresses.put("Faded Short Sleeve T-shirts", 16.51);
 		dresses.put("Blouse", 27.00);
 		 dresses.put("Printed Dress", 26.00);
+		 dresses.put("Printed Summer Dress", 30.50);
+		 dresses.put("Printed Summer Dress",28.98);
+			System.out.println(dresses); 
+		 
 		
 		
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 		 
 		List<String> countItems = new ArrayList<>();
 
@@ -117,7 +156,7 @@ public class AutomationPractice extends ExtentReport {
 		
 		List<Double> allPriceList = new ArrayList<>();
 		for (String price : allPrice) {
-			String dollar = price.replace("$", "").replace(",", "");
+			String dollar = price.replace("$", "");
 			System.out.println(dollar);
 			allPriceList.add(Double.parseDouble(dollar));
 			Collections.sort(allPriceList);

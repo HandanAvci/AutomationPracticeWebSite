@@ -13,6 +13,7 @@ Scenario: Verify that user can navigate to Login Page
 	
 	
 Scenario: Verify the dresses 
+	Given user in home page 
 	When User click on the dresses 
 	And User able to see all the prices for dresses 
 	And User click on second dress 

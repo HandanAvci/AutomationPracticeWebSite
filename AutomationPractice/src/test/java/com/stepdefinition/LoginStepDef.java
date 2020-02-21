@@ -88,14 +88,16 @@ public class LoginStepDef {
 		pf.getSubmit().click();
 	}
 
-	@Then("^The title of the page is My Account-My Store$")
-	public void the_title_of_the_page_is_My_Account_My_Store() {
+	@When("^user verify to page title$")
+	public void user_verify_to_page_title() {
 		Assert.assertEquals("My account - My Store", driver.getTitle());
+		
 	}
+	
+	
+	
 
-
-
-	@Given("^User click on the dresses$")
+	@When("^User click on the dresses$")
 	public void user_click_on_the_dresses() {
 		
 		pf.getDresses().click();
@@ -119,10 +121,15 @@ public class LoginStepDef {
 		System.out.println("Without duplicate product from" + " Automation Practice:" + noDuplicateProduct);
 		
 		Map<String, Double> dresses=new HashMap<>();
-		System.out.println("Initial list of elements: "+dresses);  
+	 
 		dresses.put("Faded Short Sleeve T-shirts", 16.51);
 		dresses.put("Blouse", 27.00);
-		 dresses.put("Printed Dress", 26.00);
+		dresses.put("Printed Chiffon Dress", 16.40);
+		dresses.put("Printed Dress", 26.00);
+		dresses.put("Printed Dress", 50.99);
+		dresses.put("Printed Summer Dress", 30.50);
+		dresses.put("Printed Summer Dress", 28.98);
+		System.out.println("Initial list of elements: "+dresses); 
 		
 		
 		 
@@ -233,14 +240,15 @@ public class LoginStepDef {
 		pf.getTermsOfService().click();
 	}
 
-	@Then("^Two dress should be in the shopping cart$")
+	@When("^Two dress should be in the shopping cart$")
 	public void two_dress_should_be_in_the_shopping_cart()throws Throwable {
 		pf.getLastCheckOut().click();
 		Thread.sleep(2000);
 	}
 
-	@Given("^Select check payment and proceed$")
-	public void select_check_payment_proceed() throws Throwable {
+	
+	@Given("^Select the check payment and proceed$")
+	public void select_the_check_payment_and_proceed() throws Throwable {
 		HighLighter.colour(driver, pf.getCheque());
 		Thread.sleep(2000);
 		pf.getCheque().click();

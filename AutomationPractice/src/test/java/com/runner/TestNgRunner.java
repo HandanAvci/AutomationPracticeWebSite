@@ -39,11 +39,11 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
      snippets=SnippetType.UNDERSCORE,
 
 		features = {"src/test/resources/LoginPage.feature" },
-		tags = {"@Smoketest"},	
+			
 
 		glue = { "com.stepdefinition" },
 
-		monochrome = true, strict = true, dryRun = false)
+		monochrome = true, strict = true)
 
 public class TestNgRunner extends AbstractTestNGCucumberTests {
 	

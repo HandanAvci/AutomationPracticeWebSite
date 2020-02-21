@@ -1,159 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48595" started-at="2020-02-20T00:16:17Z" finished-at="2020-02-20T00:17:06Z">
+  <suite name="Default suite" duration-ms="45017" started-at="2020-02-21T17:23:30Z" finished-at="2020-02-21T17:24:15Z">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="48595" started-at="2020-02-20T00:16:17Z" finished-at="2020-02-20T00:17:06Z">
-      <class name="com.automationpractice.AutomationPractice">
-        <test-method status="PASS" signature="before()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="before" is-config="true" duration-ms="224" started-at="2020-02-20T00:16:17Z" finished-at="2020-02-20T00:16:18Z">
+    <test name="Default test" duration-ms="45017" started-at="2020-02-21T17:23:30Z" finished-at="2020-02-21T17:24:15Z">
+      <class name="com.runner.TestNgRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="setUpClass" is-config="true" duration-ms="125" started-at="2020-02-21T17:23:30Z" finished-at="2020-02-21T17:23:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- before -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="setUp" is-config="true" duration-ms="4228" started-at="2020-02-20T00:16:18Z" depends-on-methods="com.report.ExtentReport.before" finished-at="2020-02-20T00:16:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="setUp" is-config="true" duration-ms="24" started-at="2020-02-20T00:16:22Z" finished-at="2020-02-20T00:16:22Z">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(cucumber.api.testng.PickleEventWrapper, cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="runScenario" duration-ms="44716" started-at="2020-02-21T17:23:31Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-02-21T17:24:15Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.automationpractice.AutomationPractice.login() throws java.lang.Throwable]]>
+                <![CDATA["Verify that user can navigate to Login Page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Page features"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="login" duration-ms="9264" started-at="2020-02-20T00:16:22Z" finished-at="2020-02-20T00:16:31Z">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.runner.TestNgRunner@544fe44c]" name="tearDownClass" is-config="true" duration-ms="125" started-at="2020-02-21T17:24:15Z" finished-at="2020-02-21T17:24:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="aftermethod" is-config="true" duration-ms="5" started-at="2020-02-20T00:16:31Z" finished-at="2020-02-20T00:16:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=AutomationPractice.login()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="setUp" is-config="true" duration-ms="1" started-at="2020-02-20T00:16:31Z" finished-at="2020-02-20T00:16:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automationpractice.AutomationPractice.product()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="product()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="product" duration-ms="4154" started-at="2020-02-20T00:16:31Z" depends-on-methods="com.automationpractice.AutomationPractice.login" finished-at="2020-02-20T00:16:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- product -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="aftermethod" is-config="true" duration-ms="2" started-at="2020-02-20T00:16:35Z" finished-at="2020-02-20T00:16:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=product status=SUCCESS method=AutomationPractice.product()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="setUp" is-config="true" duration-ms="1" started-at="2020-02-20T00:16:35Z" finished-at="2020-02-20T00:16:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automationpractice.AutomationPractice.addTocart() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="addTocart()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="addTocart" duration-ms="11127" started-at="2020-02-20T00:16:35Z" depends-on-methods="com.automationpractice.AutomationPractice.product" finished-at="2020-02-20T00:16:46Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addTocart -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="aftermethod" is-config="true" duration-ms="1" started-at="2020-02-20T00:16:46Z" finished-at="2020-02-20T00:16:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addTocart status=SUCCESS method=AutomationPractice.addTocart()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="setUp" is-config="true" duration-ms="1" started-at="2020-02-20T00:16:46Z" finished-at="2020-02-20T00:16:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automationpractice.AutomationPractice.termsOfService() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="termsOfService()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="termsOfService" duration-ms="2164" started-at="2020-02-20T00:16:46Z" depends-on-methods="com.automationpractice.AutomationPractice.addTocart" finished-at="2020-02-20T00:16:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- termsOfService -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="aftermethod" is-config="true" duration-ms="2" started-at="2020-02-20T00:16:49Z" finished-at="2020-02-20T00:16:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=termsOfService status=SUCCESS method=AutomationPractice.termsOfService()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="setUp" is-config="true" duration-ms="1" started-at="2020-02-20T00:16:49Z" finished-at="2020-02-20T00:16:49Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.automationpractice.AutomationPractice.checkOut() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="checkOut()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="checkOut" duration-ms="16071" started-at="2020-02-20T00:16:49Z" depends-on-methods="com.automationpractice.AutomationPractice.termsOfService" finished-at="2020-02-20T00:17:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkOut -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="aftermethod" is-config="true" duration-ms="1" started-at="2020-02-20T00:17:05Z" finished-at="2020-02-20T00:17:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkOut status=SUCCESS method=AutomationPractice.checkOut()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="teardown" is-config="true" duration-ms="843" started-at="2020-02-20T00:17:05Z" finished-at="2020-02-20T00:17:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="sfterSuite()[pri:0, instance:com.automationpractice.AutomationPractice@2d928643]" name="sfterSuite" is-config="true" duration-ms="427" started-at="2020-02-20T00:17:05Z" depends-on-methods="com.automationpractice.AutomationPractice.teardown" finished-at="2020-02-20T00:17:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sfterSuite -->
-      </class> <!-- com.automationpractice.AutomationPractice -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.runner.TestNgRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

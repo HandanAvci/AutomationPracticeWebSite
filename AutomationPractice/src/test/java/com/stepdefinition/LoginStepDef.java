@@ -136,6 +136,8 @@ public class LoginStepDef {
 		String[] allPrice = { "$28.98 ", "$26.00", "$50.99", "$30.50", "$16.40" };
 
 		List<Double> allPriceList = new ArrayList<>();
+		
+		
 		for (String price : allPrice) {
 			String dollar = price.replace("$", "").replace(",", "");
 			System.out.println(dollar);

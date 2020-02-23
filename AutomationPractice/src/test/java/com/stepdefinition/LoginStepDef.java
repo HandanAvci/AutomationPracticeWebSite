@@ -1,3 +1,4 @@
+
 package com.stepdefinition;
 
 import java.io.IOException;
@@ -36,6 +37,7 @@ public class LoginStepDef {
 	static WebDriver driver;
 	MasterPageFactory pf;
 	ObjectMap obj;
+
 	@Given("user opens browser")
 	public void user_opens_browser() throws Throwable {
 		System.setProperty("webdriver.chrome.driver",
@@ -44,8 +46,6 @@ public class LoginStepDef {
 		driver = new ChromeDriver(chromeOptions);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		
-	
 
 	}
 
@@ -53,21 +53,19 @@ public class LoginStepDef {
 	public void user_launches_the_url() throws Throwable {
 		obj = new ObjectMap();
 		driver.get(obj.getconfig("URL"));
-		
+
 	}
-		
-		
-		
+
 	@When("^user clicks on Sign in function$")
-		public void user_clicks_on_Sign_in_function() throws Throwable {
+	public void user_clicks_on_Sign_in_function() throws Throwable {
 
-			pf = PageFactory.initElements(driver, MasterPageFactory.class);
-			HighLighter.colour(driver, pf.getSignin());
+		pf = PageFactory.initElements(driver, MasterPageFactory.class);
+		HighLighter.colour(driver, pf.getSignin());
 
-			pf.getSignin().click();
-			Thread.sleep(2000);
+		pf.getSignin().click();
+		Thread.sleep(2000);
 	}
-	
+
 	@When("^user enters login id$")
 	public void user_enters_login_id() throws IOException {
 		HighLighter.colour(driver, pf.getEmail());
@@ -91,15 +89,12 @@ public class LoginStepDef {
 	@When("^user verify to page title$")
 	public void user_verify_to_page_title() {
 		Assert.assertEquals("My account - My Store", driver.getTitle());
-		
+
 	}
-	
-	
-	
 
 	@When("^User click on the dresses$")
 	public void user_click_on_the_dresses() {
-		
+
 		pf.getDresses().click();
 	}
 
@@ -111,17 +106,14 @@ public class LoginStepDef {
 			allproduct.add(pf.getProductRow().get(i).getText());
 
 		}
-		
-		
-		
+
 		System.out.println("All product from Automation Practice:" + allproduct);
-		
-		
+
 		Set<String> noDuplicateProduct = new HashSet<>(allproduct);
 		System.out.println("Without duplicate product from" + " Automation Practice:" + noDuplicateProduct);
-		
-		Map<String, Double> dresses=new HashMap<>();
-	 
+
+		Map<String, Double> dresses = new HashMap<>();
+
 		dresses.put("Faded Short Sleeve T-shirts", 16.51);
 		dresses.put("Blouse", 27.00);
 		dresses.put("Printed Chiffon Dress", 16.40);
@@ -129,23 +121,20 @@ public class LoginStepDef {
 		dresses.put("Printed Dress", 50.99);
 		dresses.put("Printed Summer Dress", 30.50);
 		dresses.put("Printed Summer Dress", 28.98);
-		System.out.println("Initial list of elements: "+dresses); 
-		
-		
-		 
+		System.out.println("Initial list of elements: " + dresses);
+
 		List<String> countItems = new ArrayList<>();
 
 		for (String item : allproduct) {
 
 			countItems.add(item + " count:" + Collections.frequency(allproduct, item));
 		}
-		
 
 		Set<String> noDuplicateCount = new HashSet<>(countItems);
 		System.out.println("Count of items from Automation Practice:" + noDuplicateCount);
 
 		String[] allPrice = { "$28.98 ", "$26.00", "$50.99", "$30.50", "$16.40" };
-		
+
 		List<Double> allPriceList = new ArrayList<>();
 		for (String price : allPrice) {
 			String dollar = price.replace("$", "").replace(",", "");
@@ -160,8 +149,7 @@ public class LoginStepDef {
 
 		System.out.println("Max price: " + Collections.max(allPriceList));
 		System.out.println("Min price: " + Collections.min(allPriceList));
-		
-		
+
 		Set<Double> noDuplicatePrice = new HashSet<>(allPriceList);
 		System.out.println("Without duplicate price:" + noDuplicatePrice);
 
@@ -171,7 +159,8 @@ public class LoginStepDef {
 	public void user_click_on_second_dress() {
 		pf.getSeconddresses().click();
 	}
-	@When ("^User chose pink dresses$")
+
+	@When("^User chose pink dresses$")
 	public void user_chose_pink_dresses() {
 		pf.getPinkDress().click();
 	}
@@ -182,12 +171,12 @@ public class LoginStepDef {
 		drpdown.selectByValue("2");
 
 	}
+
 	@When("^User add two dresses to the shopping cart$")
-	public void user_add_two_dresses_to_the_shopping_cart(){
+	public void user_add_two_dresses_to_the_shopping_cart() {
 		pf.getIconPlus1().click();
 		pf.getSelector().click();
 	}
-	
 
 	@When("^Dresses should be appear in the results$")
 	public void dresses_should_be_appear_in_the_results() {
@@ -197,15 +186,15 @@ public class LoginStepDef {
 
 	@Given("^User able to see shopping cart$")
 	public void user_able_to_see_shopping_cart() throws Throwable {
-		
+
 		Thread.sleep(1000);
 
 		HighLighter.colour(driver, pf.getSecondDressCheckOut());
 	}
-	
+
 	@When("^Check the shipping details and proceed$")
 	public void check_the_shipping_details_and_proceed() throws Throwable {
-	
+
 		TakescreenShot.captureScreenShot(driver, "Total Shipping");
 		Thread.sleep(2000);
 	}
@@ -222,18 +211,16 @@ public class LoginStepDef {
 		Thread.sleep(2000);
 		pf.getCheckOut2().click();
 
-		
 	}
 
 	@When("^User check the item in the shopping cart$")
 	public void user_check_the_item_in_the_shopping_cart() {
 		pf.getCheckOut3().click();
 	}
-	
-	
-	@When ("^User verify terms of service$")
+
+	@When("^User verify terms of service$")
 	public void User_verify_terms_of_service() throws Throwable {
-		
+
 		HighLighter.colour(driver, pf.getTermsOfService());
 		pf.getTermsOfService();
 		Thread.sleep(2000);
@@ -241,18 +228,17 @@ public class LoginStepDef {
 	}
 
 	@When("^Two dress should be in the shopping cart$")
-	public void two_dress_should_be_in_the_shopping_cart()throws Throwable {
+	public void two_dress_should_be_in_the_shopping_cart() throws Throwable {
 		pf.getLastCheckOut().click();
 		Thread.sleep(2000);
 	}
 
-	
 	@Given("^Select the check payment and proceed$")
 	public void select_the_check_payment_and_proceed() throws Throwable {
 		HighLighter.colour(driver, pf.getCheque());
 		Thread.sleep(2000);
 		pf.getCheque().click();
-		
+
 	}
 
 	@When("^Confirm the order$")
@@ -261,16 +247,10 @@ public class LoginStepDef {
 		TakescreenShot.captureScreenShot(driver, "Total Price");
 		pf.getConfirmOrder().click();
 	}
-	
-	@Then ("^User sign out$")
+
+	@Then("^User sign out$")
 	public void user_sign_out() {
-	pf.getSignOut().click();
+		pf.getSignOut().click();
 	}
-	
-
-	
-
-
-
 
 }

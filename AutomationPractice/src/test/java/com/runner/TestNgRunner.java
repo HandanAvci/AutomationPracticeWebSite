@@ -6,7 +6,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions
 
-(plugin = { "pretty", "html:target/site/cucumber-pretty", "rerun:target/rerun.txt", "json:target/cucumber1.json" },
+(plugin = { "pretty","html:target/site/cucumber-pretty","rerun:target/rerun.txt", "json:target/cucumber1.json" },
 
 		snippets = SnippetType.UNDERSCORE,
 

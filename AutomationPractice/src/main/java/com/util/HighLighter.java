@@ -8,9 +8,7 @@ public class HighLighter {
 
 	public static void colour(WebDriver driver, WebElement element) {
 
-		
-		
-		
+	
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("arguments[0].style.border='3px solid red'", element);
 	}

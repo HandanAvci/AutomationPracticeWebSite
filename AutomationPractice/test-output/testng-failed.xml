@@ -3,13 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.runner.TestNgRunner">
+      <class name="com.genericlibrary.AutomationPractice">
         <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
+          <include name="login"/>
+          <include name="before"/>
+          <include name="addTocart"/>
+          <include name="checkOut"/>
+          <include name="setUp"/>
+          <include name="termsOfService"/>
+          <include name="teardown"/>
+          <include name="aftermethod"/>
+          <include name="sfterSuite"/>
+          <include name="setUp"/>
+          <include name="product"/>
         </methods>
-      </class> <!-- com.runner.TestNgRunner -->
+      </class> <!-- com.genericlibrary.AutomationPractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -34,10 +34,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginStepDef {
-	static WebDriver driver;
+	WebDriver driver;
 	MasterPageFactory pf;
 	ObjectMap obj;
 
+	
+	
 	@Given("user opens browser")
 	public void user_opens_browser() throws Throwable {
 		System.setProperty("webdriver.chrome.driver",
@@ -47,6 +49,7 @@ public class LoginStepDef {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
+		
 	}
 
 	@When("user launches the url")

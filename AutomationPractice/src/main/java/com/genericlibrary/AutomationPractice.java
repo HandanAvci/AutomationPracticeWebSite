@@ -1,4 +1,4 @@
-package com.automationpractice;
+package com.genericlibrary;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,21 +31,21 @@ public class AutomationPractice extends ExtentReport {
 
 	@BeforeTest
 	public void setUp() {
-	
+
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\nefer\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
-	 driver = new ChromeDriver(chromeOptions);
+		driver = new ChromeDriver(chromeOptions);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 	}
 
-	@Test
+	@Test //Test case -01
 	public void login() throws Throwable {
-	
-        driver.getTitle();
+
+		driver.getTitle();
 
 		System.out.println("My Store");
 
@@ -70,113 +70,43 @@ public class AutomationPractice extends ExtentReport {
 		pf.getSubmit().click();
 
 	}
-
+//Test Case -02
 	@Test(dependsOnMethods = "login")
 	public void product() {
 
 		pf.getDresses().click();
-		
-		
-		
-		
 
 		List<String> allproduct = new ArrayList<>();
 		for (int i = 0; i < pf.getProductRow().size(); i++) {
-			allproduct.add(pf.getProductRow().get(i).getText());
 
+			allproduct.add(pf.getProductRow().get(i).getText());
 		}
 		System.out.println("All product from Automation Practice:" + allproduct);
-		
-		
-		
-		
-		
+
 		Set<String> noDuplicateProduct = new HashSet<>(allproduct);
-		
+
 		System.out.println("Without duplicate product from" + " Automation Practice:" + noDuplicateProduct);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		Map<String, Double> dresses=new HashMap<>();
-	 
+
+		Map<String, Double> dresses = new HashMap<>();
+
 		dresses.put("Faded Short Sleeve T-shirts", 16.51);
 		dresses.put("Blouse", 27.00);
-		 dresses.put("Printed Dress", 26.00);
-		 dresses.put("Printed Summer Dress",28.98);
-			System.out.println(dresses); 
-		 
-		
-		
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
+		dresses.put("Printed Dress", 26.00);
+		dresses.put("Printed Summer Dress", 28.98);
+		System.out.println(dresses);
+
 		List<String> countItems = new ArrayList<>();
 
 		for (String item : allproduct) {
 
 			countItems.add(item + " count:" + Collections.frequency(allproduct, item));
 		}
-		
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		Set<String> noDuplicateCount = new HashSet<>(countItems);
 		System.out.println("Count of items from Automation Practice:" + noDuplicateCount);
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		String[] allPrice = { "$28.98 ", "$26.00", "$50.99", "$30.50", "$16.40" };
-		
+
 		List<Double> allPriceList = new ArrayList<>();
 		for (String price : allPrice) {
 			String dollar = price.replace("$", "");
@@ -191,15 +121,13 @@ public class AutomationPractice extends ExtentReport {
 
 		System.out.println("Max price: " + Collections.max(allPriceList));
 		System.out.println("Min price: " + Collections.min(allPriceList));
-		
-		
+
 		Set<Double> noDuplicatePrice = new HashSet<>(allPriceList);
 		System.out.println("Without duplicate price:" + noDuplicatePrice);
 
 		pf.getSeconddresses().click();
 		pf.getPinkDress().click();
-		
-		
+
 		Select drpdown = new Select(driver.findElement(By.name("group_1")));
 		drpdown.selectByValue("2");
 

@@ -3,7 +3,7 @@
 <suite thread-count="2" parallel="tests" name="Suite" group-by-instances="true">
   <test  name="Test">
     <classes>
-      <class name="com.automationpractice.AutomationPractice"/>
+      <class name="com.practice.FinanciacAutomation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

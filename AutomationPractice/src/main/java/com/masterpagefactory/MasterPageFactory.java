@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MasterPageFactory {
 	WebDriver driver;
-public void  MasterPageFactory( WebDriver driver) {
+public  MasterPageFactory( WebDriver driver) {
 	
 	this.driver=driver;
 }
@@ -78,7 +78,8 @@ private WebElement category;
 	public WebElement getCategory() {
 	return category;
 }
-@FindBy (xpath=("//*[contains(@class,'product_list grid row')]"))
+@FindBy 
+(xpath=("//*[contains(@class,'product_list grid row')]"))
 private List<WebElement> productRow;
 	public List<WebElement> getProductRow() {
 	return productRow;

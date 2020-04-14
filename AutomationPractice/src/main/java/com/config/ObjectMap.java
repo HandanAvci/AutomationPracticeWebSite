@@ -14,10 +14,8 @@ public class ObjectMap {
 	
 		
 		String file = "./config.properties"; // location
-
-		FileInputStream fis = new FileInputStream(file);  //serilization
-		
-		Properties properties = new Properties(); //to read notepad
+		FileInputStream fis=new FileInputStream(file); //serilization
+		Properties properties=new Properties();  //to read notepad
 		
 		properties.load(fis); // properties & serilization connect together
 		

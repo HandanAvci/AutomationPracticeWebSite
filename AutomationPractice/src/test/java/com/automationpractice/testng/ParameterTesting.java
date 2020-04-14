@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class ParameterTesting {
 
 	
-	@Parameters("browser") // browser =fire,chrom,safari
+	@Parameters("browser") // browser =fire,chrome,safari
 	@Test
 	public void getbrowser(String browserValue) {
 		

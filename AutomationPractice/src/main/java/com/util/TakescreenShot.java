@@ -14,6 +14,7 @@ import org.openqa.selenium.WebDriver;
 public class TakescreenShot {
 
 	public static  String captureScreenShot(WebDriver driver, String ScreenShotName) {
+	//Type casting polly
 	TakesScreenshot ts = (TakesScreenshot) driver;
 	String currentDir = System.getProperty("user.dir");
 	File source = ts.getScreenshotAs(OutputType.FILE);

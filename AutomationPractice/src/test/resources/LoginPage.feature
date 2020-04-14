@@ -8,7 +8,6 @@ Scenario: Verify that user can navigate to Login Page
 	And user enters password 
 	And user click on sign in button 
 	And user verify to page title
-	
 	When User click on the dresses 
 	And User able to see all the prices for dresses 
 	And User click on second dress 

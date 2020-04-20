@@ -45,7 +45,7 @@ public class AutomationPractice extends ExtentReport {
 	@Test //Test case -01
 	public void login() throws Throwable {
 
-		driver.getTitle();
+		driver.getTitles();
 
 		System.out.println("My Store");
 
